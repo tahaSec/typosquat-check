@@ -1,4 +1,6 @@
-# typosquat-check
+<p align="center">
+  <img src="docs/banner.svg" alt="typosquat-check" width="100%">
+</p>
 
 **Catch typosquatted, look-alike and AI-hallucinated package names before you
 `pip install` or `npm install` them.**
@@ -17,23 +19,9 @@ don't exist, and attackers register those names.
 `package.json` and compares every dependency against the ~15,000 most
 downloaded PyPI and npm packages.
 
-```console
-$ typosquat-check examples/
-CRITICAL crossenv (npm)  examples/package.json:7
-         known malicious typosquat of 'cross-env'
-CRITICAL colourama (pypi)  examples/requirements.txt:4
-         known malicious typosquat of 'colorama'
-HIGH     react_dom (npm)  examples/package.json:5
-         same letters as 'react-dom' with different separators  [#476 most downloaded]
-         did you mean: react-dom
-HIGH     @typess/node (npm)  examples/package.json:10
-         one-character typo of '@types/node'  [#147 most downloaded]
-HIGH     reqeusts (pypi)  examples/requirements.txt:3
-         one-character typo of 'requests'  [#8 most downloaded]
-         did you mean: requests
-...
-8 suspicious of 11 dependencies checked.
-```
+<p align="center">
+  <img src="docs/demo.svg" alt="typosquat-check demo output" width="100%">
+</p>
 
 ## What it detects
 
