@@ -1,0 +1,7 @@
+# Demo file with planted mistakes. Run: typosquat-check examples/
+flask==3.0.3
+reqeusts==2.32.3
+colourama==0.4.6
+djnago>=5.0
+numpy==2.1.0
+beautifulsup4

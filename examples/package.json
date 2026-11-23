@@ -1,0 +1,12 @@
+{
+  "name": "demo",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react_dom": "^19.0.0",
+    "expres": "^4.21.0",
+    "crossenv": "^1.0.0"
+  },
+  "devDependencies": {
+    "@typess/node": "^22.0.0"
+  }
+}

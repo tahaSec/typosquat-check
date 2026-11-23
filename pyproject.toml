@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "typosquat-check"
+version = "0.1.0"
+description = "Catch typosquatted, look-alike and AI-hallucinated package names in requirements.txt, pyproject.toml and package.json."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Muhammed Taha Özer" }]
+keywords = ["typosquatting", "supply-chain", "slopsquatting", "dependency-confusion", "pypi", "npm", "security"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+]
+dependencies = ['tomli>=1.1; python_version < "3.11"']
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+typosquat-check = "typosquat_check.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/tahaSec/typosquat-check"
+Issues = "https://github.com/tahaSec/typosquat-check/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.package-data]
+typosquat_check = ["data/*.txt"]
